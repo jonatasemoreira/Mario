@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="img/pipe.png" type="image/x-icon">
+    <!--CSS Only-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--Java Script-->
+    <script src="./js/script.js" defer></script>
+
+    <title>Super Mario</title>
+  </head>
+  <body>
+    
+      <div class="game-board">
+      <img src="./img/clouds.png" class="clouds" alt="Imagem de nuvens" />
+      <img src="./img/mario-speed.gif" class="mario pause-initial-mario"/>
+      <img src="./img/pipe.png" class="pipe pause-initial-pipe"/>
+      <div class="pontuacao">
+        <h2 class="pontuacaoFinal"></h2>
+      </div>
+    </div>
+    
+    <div class="gameOver">
+      <h1>GAME <span style="color: red;">OVER</span></h1>
+      <h2 class="gameOverPontuacao"></h2>
+      <h1>Press to Restart</h1>
+      <div class="btnFechar">
+        <a>Space</a>
+      </div>
+    </div>
+          <!--Bordas Animadas-->
+    <div class="card">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+  </body>
+</html>

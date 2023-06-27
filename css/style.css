@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body {
+    background-image: url(../img/fundo.png);
+}
+.game-board {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    bottom: 20%;
+    position: absolute;
+    height: 70vh;
+    right: 10%;
+    overflow: hidden;
+    background: linear-gradient(#1c91f8, #91f0fb);
+    box-shadow: 1px 1px 15px black;
+}
+.start-game {
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+.clouds {
+    position: absolute;
+    width: 500px;
+    margin-top: 10px;
+    animation: clouds-animation 20s linear infinite;
+}
+.mario {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+}
+.jump {
+    animation: mario-jump 600ms ease-out;
+}
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+.audio {
+    position: absolute;
+    right: 0;
+    margin: auto;
+}
+.pontuacao {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 60px;
+    box-shadow: 1px 1px 5px white;
+    margin: 15px;
+    border-radius: 50px;
+}
+.pontuacao h2 {
+    line-height: 60px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.788);
+}
+.gameOver {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 80%;
+    height: 70vh;
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: none;
+    background-image: radial-gradient(circle, rgb(95, 148, 228), rgb(255, 255, 255));
+}
+.gameOver h1 {
+    font-size: 80px;
+    margin-top: 50px;
+}
+.gameOver h2 {
+    font-size: 30px;
+    margin: 15px 0 15px 0;
+}
+.gameOver h1 {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+.btnFechar {
+    width: 350px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: rgb(151, 14, 14);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px white;
+}
+.btnFechar a {
+    color: white;
+    line-height: 50px;
+    font-size: 25px;
+    text-shadow: 1px 2px 3px black;
+}
+/*Bordas Animadas*/
+.card {
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 70vh;
+    right: 10%;
+    top: 10%;
+    overflow: hidden;
+}
+.card span:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to right, transparent,blue);
+    animation: animar1 2s linear infinite;
+}
+@keyframes animar1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+.card span:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent, red);
+    animation: animar2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animar2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+.card span:nth-of-type(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to left, transparent, blue);
+    animation: animar3 2s linear infinite;
+}
+@keyframes animar3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.card span:nth-of-type(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent, red);
+    animation: animar4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animar4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+@keyframes animarGameOver {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.1)
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes mario-jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
